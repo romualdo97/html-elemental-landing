@@ -53,7 +53,7 @@
                 <li><a href="#">Speakers</a></li>
                 <li><a href="news.html">News</a></li> -->
                 <!-- <li><a href="contact.html">Contacts</a></li> -->
-                <li class="cta"><a href="buy-tickets.html">Comprar minilibro</a></li>
+                <li class="cta"><a href="#" onclick="buyNow()">Comprar minilibro</a></li>
               </ul>
             </nav>
           </div>
@@ -73,6 +73,7 @@
             <h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200">HTML ELEMENTAL</h1>
             <span class="d-block mb-5 caption" data-aos="fade-up" data-aos-delay="300">Aprende HTML para crear la página de su negocio o el próximo Google</span>
             <a href="#todosloslenguajes" class="btn-custom" data-aos="fade-up" data-aos-delay="400"><span>¿Cómo aprender?</span></a>
+            <div style="height: 150px;"></div> <!-- Added to foce previous element to me more upwards, since this contente is vertically center -->
 
           </div>
         </div>
@@ -404,12 +405,33 @@
 
         <div class="row" data-aos="fade-up" data-aos-delay="500">
           <div class="col-12 text-center pt-5">
-            <a href="#" class="btn-custom" data-aos="fade-up" data-aos-delay="100"><span>Comprar minilibro</span></a>
+            <a id="buy-button-2" href="#buy-button-2" onclick="buyNow()" class="btn-custom" data-aos="fade-up" data-aos-delay="100"><span>Comprar minilibro</span></a>
           </div>
         </div>
       </div>
     </div>
       
+    <form id="buy-now-form" method="post" action="https://gateway.payulatam.com/ppp-web-gateway/pb.zul" accept-charset="UTF-8">
+      <!--   <input type="image" alt="" src="http://www.payulatam.com/img-secure-2015/boton_pagar_pequeno.png" onClick="this.form.urlOrigen.value = window.location.href;"/> -->
+        <input name="buttonId" type="hidden" value="HgvNAgQCspCiUue9Olz6XamifG1VCF2zJ327jI4S9UtSP3w3zF8Hrw=="/>
+        <input name="merchantId" type="hidden" value="652318"/>
+        <input name="accountId" type="hidden" value="654818"/>
+        <input name="description" type="hidden" value="HTML Elemental minilibro"/>
+        <input name="referenceCode" type="hidden" value="000001"/>
+        <input name="amount" type="hidden" value="39900.00"/>
+        <input name="tax" type="hidden" value="0.00"/>
+        <input name="taxReturnBase" type="hidden" value="0.00"/>
+        <input name="shipmentValue" value="0.00" type="hidden"/>
+        <input name="currency" type="hidden" value="COP"/>
+        <input name="lng" type="hidden" value="es"/>
+        <input name="approvedResponseUrl" type="hidden" value="https://htmlelemental.com/sucess"/>
+        <input name="declinedResponseUrl" type="hidden" value="https://htmlelemental.com"/>
+        <input name="pendingResponseUrl" type="hidden" value="https://htmlelemental.com/waiting-validation"/>
+        <input name="sourceUrl" id="urlOrigen" value="" type="hidden"/>
+        <input name="buttonType" value="SIMPLE" type="hidden"/>
+        <input name="signature" value="b033223e0089c23eaa7cb00be872201312923b27dd8e2f198debef0f83e460ee" type="hidden"/>
+    </form>
+
     <footer class="site-footer">
       <div class="container">
 

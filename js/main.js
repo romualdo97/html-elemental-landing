@@ -238,3 +238,10 @@ jQuery(document).ready(function($) {
 	};
 	siteDatePicker();
 });
+
+function buyNow() {
+	var form = document.getElementById('buy-now-form');
+	form.sourceUrl.value = window.location.href;
+	form.submit();
+	console.log('Thanks for buying HTML elemental <3');
+}

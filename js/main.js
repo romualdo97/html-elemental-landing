@@ -239,9 +239,16 @@ jQuery(document).ready(function($) {
 	siteDatePicker();
 });
 
-function buyNow() {
+function buyNow(whichBuyButton) {
 	var form = document.getElementById('buy-now-form');
 	form.sourceUrl.value = window.location.href;
 	form.submit();
 	console.log('Thanks for buying HTML elemental <3');
+
+	// https://developers.google.com/analytics/devguides/collection/gtagjs/events
+	gtag('event', 'begin_checkout', {
+		'event_category': 'clicked_buy_button',
+		'event_label': 'Clicked buy button',
+		'value': whichBuyButton
+	});
 }

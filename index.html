@@ -23,6 +23,17 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BMFP1DDRHQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BMFP1DDRHQ');
+    </script>
+    <!-- End Google Analytics -->
+
     <!-- Facebook Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
@@ -41,6 +52,7 @@
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1291659557865843&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
+
   </head>
   <body>
   
@@ -72,7 +84,7 @@
                 <li><a href="#">Speakers</a></li>
                 <li><a href="news.html">News</a></li> -->
                 <!-- <li><a href="contact.html">Contacts</a></li> -->
-                <li class="cta"><a href="#" onclick="buyNow()">Comprar minilibro</a></li>
+                <li class="cta"><a href="#" onclick="buyNow('initial buy button')">Comprar minilibro</a></li>
               </ul>
             </nav>
           </div>
@@ -420,7 +432,7 @@
 
         <div class="row" data-aos="fade-up" data-aos-delay="500">
           <div class="col-12 text-center pt-5">
-            <a id="buy-button-2" href="#buy-button-2" onclick="buyNow()" class="btn-custom" data-aos="fade-up" data-aos-delay="100"><span>Comprar minilibro</span></a>
+            <a id="buy-button-2" href="#buy-button-2" onclick="buyNow('final buy button')" class="btn-custom" data-aos="fade-up" data-aos-delay="100"><span>Comprar minilibro</span></a>
           </div>
         </div>
       </div>
